@@ -1,0 +1,124 @@
+/*Declarando variável para cores principais do site*/
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementos base*/
+body{
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(211, 211, 211);
+}
+
+header .conteiner{
+    display: flex;/*por padrão a direção será em "ROW"*/
+    flex-direction: row;/*não é necessario usá-lo*/
+    align-items: center;
+    justify-content: space-between;/*espaço entre os elementos horizontais*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black',Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;/*retira o sublinhado*/
+    color: #AAA;
+    margin-right: 10px;/*margem á direita*/
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*Filme principal*/
+.filme-principal{
+    font-size: 16px;
+
+    /*aplica uma camada escura fina sobre a imagem*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0, 0, 0,.50)100%), url('/img/capa-dark4.jpg');
+
+    height: 400px;
+    background-size: cover;/*cobre toda a área da caixa*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin: 30px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0,.50);
+    border: none;
+    color: white;
+    border-radius: 10px;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;/*não funcionou*/
+    transition: .3s ease all;/*animação ao abrir a página*/
+}
+
+/*efeito do mouse sobre o botão*/
+.botao:hover{
+    background-color: white;
+    color: black;
+    font-size: 80%;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+/*Wrapper = envelopar*/
+.conteiner{
+    margin-left: 15px;
+}
+
+.filme-principal .conteiner{
+    /*width: 70%; Terá largura de até 70% da tela*/
+    margin-bottom: 10%;
+}
+
+/*Dimensão de cada post*/
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+/*Borda dos postes*/
+.item .box-filme:hover{
+    border-top: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+}
